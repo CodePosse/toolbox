@@ -1,16 +1,17 @@
 // Untitled Project - created with Gulp Fiction
 var gulp = require("gulp");
-var cheerio = require('gulp-cheerio')
-var gutil = require('gulp-util');
-var plumber = require('gulp-plumber');
-var inject = require('gulp-inject');
-var open = require('gulp-open');
-var sass = require('gulp-sass');
+var cheerio = require('gulp-cheerio')//use jquery in gulp
+var gutil = require('gulp-util');//utilities
+var plumber = require('gulp-plumber');//error handler
+var inject = require('gulp-inject');//injects html/css/js into placeholders
+var open = require('gulp-open');//open in a browser
+var prettify = require('gulp-prettify');//properly formats HTML
+var sass = require('gulp-sass');//scss/sass task
 var uglify = require('gulp-uglify');
 var uglifycss = require('gulp-uglifycss');
-var concat = require("gulp-concat");
-var gulpif = require('gulp-if');
-var htmlmin = require('gulp-html-minifier');
+var concat = require("gulp-concat");//concatinate files
+var gulpif = require('gulp-if');//if else for gulp
+var htmlmin = require('gulp-html-minifier');//html uglify
 
 gulp.task("default", function () {
   gutil.log(gutil.colors.bgGreen.white.bold('GULP WORKS'), gutil.colors.bgRed.white.bold("type: \"gulp --tasks\" to list all tasks"));
@@ -22,6 +23,13 @@ gulp.task('miniHTML', function () {
   gulp.src('./src/*.html')//DUDE, CHANGE ME
     .pipe(plumber())
     .pipe(htmlmin())
+    .pipe(gulp.dest('./'));//DUDE, CHANGE ME
+});
+
+gulp.task('prettyHTML', function () {
+  gulp.src('./src/*.html')//DUDE, CHANGE ME
+    .pipe(plumber())
+    .pipe(prettify())
     .pipe(gulp.dest('./'));//DUDE, CHANGE ME
 });
 
