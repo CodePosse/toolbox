@@ -5,11 +5,13 @@ This doc is to explain the repo.
 I created a series of tools for post-production and pre-compilation of front end assets like HTML, JS and CSS.
 
 miniHTML uglifies HTML.
+prettyHTML formats HTML to be indented and readable.
 miniJS uglifies JS.
 miniCSS uglifies CSS.
-prettyHTML formats HTML to be indented and readable.
+sass runs SASS.
 
-How to use!
+
+33 How to use!
 
 Total n00b:
 1) install NodeJS 7+
@@ -17,5 +19,6 @@ Total n00b:
 3) get a comman prompt in the root of this folder
 4) type "npm i" and it will install all the stuff you will need in that folder
 5) type "gulp" and you should see a confirmation that it works
-6) type "gulp --tasks" and it will tell you all the tasks in the file
-7) place the files you want to work with in a sub folder and open gulpfile.js and look at the comments next to the tasks. Choose a source and destination. They can be the same, but I am not that bold/foolhearty.
+6) type "gulp --tasks" and it will tell you all the tasks in the file, when you see one you want, you'll type `gulp taskName` and it will run that task.
+7) place the files you want to work with in a sub folder and open gulpfile.js and look at the comments next to the tasks. *Choose a source and destination*. They can be the same, but I am not that bold/foolhearty.
+
