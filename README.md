@@ -4,11 +4,11 @@ This doc is to explain the repo.
 
 I created a series of tools for post-production and pre-compilation of front end assets like HTML, JS and CSS.
 
-miniHTML uglifies HTML.
-prettyHTML formats HTML to be indented and readable.
-miniJS uglifies JS.
-miniCSS uglifies CSS.
-sass runs SASS.
+ - miniHTML uglifies HTML.
+ - prettyHTML formats HTML to be indented and readable.
+ - miniJS uglifies JS.
+ - miniCSS uglifies CSS.
+ - sass runs SASS.
 
 
 ## How to use!
