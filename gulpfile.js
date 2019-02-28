@@ -3,14 +3,10 @@ var gulp = require("gulp");
 var cheerio = require('gulp-cheerio') //use jquery in gulp
 var gutil = require('gulp-util'); //utilities
 var plumber = require('gulp-plumber'); //error handler
-var inject = require('gulp-inject'); //injects html/css/js into placeholders
-var open = require('gulp-open'); //open in a browser
 var prettify = require('gulp-prettify'); //properly formats HTML
 var sass = require('gulp-sass'); //scss/sass task
 var uglify = require('gulp-uglify');
 var uglifycss = require('gulp-uglifycss');
-var concat = require("gulp-concat"); //concatinate files
-var gulpif = require('gulp-if'); //if else for gulp
 var htmlmin = require('gulp-htmlmin'); //html uglify
 
 gulp.task("default", async function () {
