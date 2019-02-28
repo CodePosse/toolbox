@@ -4,7 +4,7 @@ This doc is to explain the repo.
 
 I created a series of tools for post-production and pre-compilation of front end assets like HTML, JS and CSS.
 
- - miniHTML uglifies HTML and adds 'alt' to 'img' tags for compliance.
+ - miniHTML uglifies HTML and adds `alt` to `img` tags for compliance.
  - prettyHTML formats HTML to be indented and readable.
  - miniJS uglifies JS.
  - miniCSS uglifies CSS.
