@@ -13,25 +13,22 @@
   "devDependencies": {
     "gulp": "^4.0.0",
     "gulp-add-src": "^1.0.0",
-    "gulp-cheerio": "^0.6.2",
-    "gulp-concat": "*",
-    "gulp-html-minifier": "^0.1.6",
-    "gulp-htmlclean": "^2.6.3",
+    "gulp-cheerio": "^0.6.3",
+    "gulp-concat": "^2.6.1",
+    "gulp-html-minifier": "^0.1.8",
+    "gulp-htmlclean": "^2.7.22",
     "gulp-htmlmin": "^5.0.1",
     "gulp-if": "^2.0.2",
     "gulp-inject": "^5.0.2",
-    "gulp-plumber": "^1.0.0",
+    "gulp-plumber": "^1.2.1",
     "gulp-sass": "^4.0.2",
     "gulp-uglify": "^3.0.1",
-    "gulp-uglifycss": "^1.0.4",
-    "gulp-util": "^3.0.8",
-    "livereload": "*"
+    "gulp-uglifycss": "^1.1.0",
+    "gulp-util": "^3.0.8"
   },
   "dependencies": {
     "clean-css": "^4.2.1",
-    "gulp-concat": "^2.5.2",
     "gulp-prettify": "^0.5.0",
-    "gulp-uglifycss": "^1.0.4",
-    "gulp-uglifyjs": "^0.6.1"
+    "minimatch": "^3.0.4"
   }
 }

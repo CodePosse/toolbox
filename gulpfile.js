@@ -11,45 +11,45 @@ var uglify = require('gulp-uglify');
 var uglifycss = require('gulp-uglifycss');
 var concat = require("gulp-concat");//concatinate files
 var gulpif = require('gulp-if');//if else for gulp
-var htmlmin = require('gulp-html-minifier');//html uglify
+var htmlmin = require('gulp-htmlmin');//html uglify
 
-gulp.task("default", function () {
+gulp.task("default", async function () {
   gutil.log(gutil.colors.bgGreen.white.bold('GULP WORKS'), gutil.colors.bgRed.white.bold("type: \"gulp --tasks\" to list all tasks"));
   gulp.src(__filename)
   .pipe(open({uri: 'https://www.npmjs.com/package/gulp/'}));
 });
 
-gulp.task('miniHTML', function () {
-  gulp.src('./src/*.html')//DUDE, CHANGE ME
+gulp.task('miniHTML', async function () {
+  gulp.src('src/html/*.html')//DUDE, CHANGE ME
     .pipe(plumber())
-    .pipe(htmlmin())
-    .pipe(gulp.dest('./'));//DUDE, CHANGE ME
+    .pipe(htmlmin({ collapseWhitespace: true, removeComments: true, minifyCSS: true, minifyJS: true}))
+    .pipe(gulp.dest('./prod/html/'));//DUDE, CHANGE ME
 });
 
-gulp.task('prettyHTML', function () {
-  gulp.src('./src/*.html')//DUDE, CHANGE ME
+gulp.task('prettyHTML', async function (resolve) {
+  gulp.src('./src/html/*.html')//DUDE, CHANGE ME
     .pipe(plumber())
     .pipe(prettify())
-    .pipe(gulp.dest('./'));//DUDE, CHANGE ME
+    .pipe(gulp.dest('./prod/html/'));//DUDE, CHANGE ME
 });
 
-gulp.task('sass', function () {
+gulp.task('sass', async function () {
   gulp.src('./src/scss/theme.scss')//DUDE, CHANGE ME
     .pipe(plumber())
 	  .pipe(sass())
     .pipe(gulp.dest('src/css'));//DUDE, CHANGE ME
 });
 
-gulp.task('miniCSS', function () {
+gulp.task('miniCSS', async function () {
   gulp.src('./src/**/*.css')//DUDE, CHANGE ME
     .pipe(plumber())
     .pipe(uglifycss())
     .pipe(gulp.dest('./css'));//DUDE, CHANGE ME
 });
 
-gulp.task('miniJS', function(){
+gulp.task('miniJS', async function(){
   gulp.src('./src/js/*.js')//DUDE, CHANGE ME
     .pipe(plumber())
-    .pipe(uglify({preserveComments : false,mangle : false}))
-    .pipe(gulp.dest('/js'));//DUDE, CHANGE ME
+    .pipe(uglify())
+    .pipe(gulp.dest('./prod/js'));//DUDE, CHANGE ME
 });
