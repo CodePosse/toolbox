@@ -3,11 +3,12 @@ const fg = require("fast-glob");
 const cheerio = require("cheerio");
 const prettier = require("prettier");
 
-const ROOT_DIR = "./";
+const ROOT_DIR = "sample";
 const BASE_URL = "https://domain.com";
 const SITE_NAME = "LA Courts";
 
 const LOGO = "https://codeposse.github.io/LA-Courts/img/court-seal.gif";
+const WIDE_IMAGE = "https://codeposse.github.io/LA-Courts/jury/img/lacourt_logo_transparent.png";
 
 function pageUrl(file) {
     let clean = file.replace(/\\/g, "/");
@@ -19,17 +20,15 @@ function pageUrl(file) {
     return `${BASE_URL}/${clean}`;
 }
 
-function titleCase(text) {
-    return text
-        .replace(/[-_]/g, " ")
-        .replace(/\b\w/g, char => char.toUpperCase());
+function titleCase(value) {
+    return value.replace(/[-_]/g, " ").replace(/\b\w/g, char => char.toUpperCase());
 }
 
 function breadcrumbSchema(file) {
     const clean = file.replace(/\\/g, "/").replace(/\/index\.html$/, "");
     const parts = clean.split("/").filter(Boolean);
 
-    const items = [
+    const crumbs = [
         {
             name: "Home",
             item: BASE_URL
@@ -42,11 +41,11 @@ function breadcrumbSchema(file) {
 
     return {
         "@type": "BreadcrumbList",
-        itemListElement: items.map((item, index) => ({
+        itemListElement: crumbs.map((crumb, index) => ({
             "@type": "ListItem",
             position: index + 1,
-            name: item.name,
-            item: item.item
+            name: crumb.name,
+            item: crumb.item
         }))
     };
 }
@@ -59,15 +58,15 @@ async function processFile(file) {
     });
 
     if ($('script[type="application/ld+json"]').length) {
-        console.log(`Skipped existing schema: ${file}`);
+        console.log(`Schema already exists: ${file}`);
         return;
     }
 
+    const url = pageUrl(file);
     const title = $("title").first().text().trim() || SITE_NAME;
     const description =
         $('meta[name="description"]').attr("content") ||
         "Official Los Angeles County Superior Court information and services.";
-    const url = pageUrl(file);
 
     const schema = {
         "@context": "https://schema.org",
@@ -94,6 +93,7 @@ async function processFile(file) {
                 url,
                 name: title,
                 description,
+                image: WIDE_IMAGE,
                 isPartOf: {
                     "@id": `${BASE_URL}/#website`
                 },
@@ -116,8 +116,7 @@ async function processFile(file) {
     });
 
     await fs.writeFile(file, formatted, "utf8");
-
-    console.log(`Added schema: ${file}`);
+    console.log(`Schema added: ${file}`);
 }
 
 async function run() {

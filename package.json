@@ -1,22 +1,28 @@
 {
-  "name": "toolbox",
+  "name": "static-site-toolkit",
   "version": "1.0.0",
-  "description": "SEO, Meta, Minify, ADA Toolox, Schema",
   "author": "Tim Hunold <codeposse@gmail.com>",
   "repository": "https://github.com/CodePosse/toolbox.git",
+  "description": "Reusable static HTML toolkit for SEO, Open Graph, Twitter Cards, schema, accessibility, sitemaps, links, prettifying, and minification.",
+  "type": "commonjs",
   "scripts": {
-    "social": "node add-social-cards.js",
-    "seo": "node add-seo-meta.js",
-    "ada": "node add-ada-fixes.js",
-    "meta": "npm run seo && npm run social",
-    "pretty": "node prettify.js",
-    "minify": "node minify.js"
+    "seo": "node tools/add-seo-meta.js",
+    "social": "node tools/add-social-cards.js",
+    "schema": "node tools/add-schema.js",
+    "ada": "node tools/add-ada-fixes.js",
+    "breadcrumbs": "node tools/add-breadcrumbs.js",
+    "sitemap": "node tools/add-sitemap.js",
+    "links": "node tools/check-links.js",
+    "pretty": "node tools/prettify.js",
+    "minify": "node tools/minify.js",
+    "meta": "npm run seo && npm run social && npm run schema",
+    "build": "npm run meta && npm run ada && npm run breadcrumbs && npm run sitemap && npm run pretty"
   },
   "devDependencies": {
-    "cheerio": "^1.2.0",
-    "fast-glob": "^3.3.3",
+    "cheerio": "^1.0.0",
+    "fast-glob": "^3.3.2",
+    "prettier": "^3.3.3",
     "html-minifier-terser": "^7.2.0",
-    "prettier": "^3.9.3",
-    "terser": "^5.48.0"
+    "terser": "^5.31.0"
   }
 }

@@ -3,7 +3,7 @@ const fg = require("fast-glob");
 const cheerio = require("cheerio");
 const prettier = require("prettier");
 
-const ROOT_DIR = "./";
+const ROOT_DIR = "./sample";
 
 function ensureId($, el, prefix, index) {
     let id = $(el).attr("id");
