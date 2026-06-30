@@ -3,7 +3,7 @@ const fg = require("fast-glob");
 const cheerio = require("cheerio");
 const prettier = require("prettier");
 
-const ROOT_DIR = "/";
+const ROOT_DIR = "./";
 const BASE_URL = "https://domain.com";
 
 const SITE_NAME = "LA Courts";

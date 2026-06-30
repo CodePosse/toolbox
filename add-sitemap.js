@@ -2,7 +2,7 @@ const fs = require("fs/promises");
 const path = require("path");
 const fg = require("fast-glob");
 
-const ROOT_DIR = "2026";
+const ROOT_DIR = "./";
 const BASE_URL = "https://domain.com";
 
 function pageUrl(file) {

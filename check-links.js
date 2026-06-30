@@ -3,7 +3,7 @@ const path = require("path");
 const fg = require("fast-glob");
 const cheerio = require("cheerio");
 
-const ROOT_DIR = "2026";
+const ROOT_DIR = "./";
 
 function isExternal(href) {
     return /^https?:\/\//i.test(href);

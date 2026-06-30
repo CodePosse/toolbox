@@ -4,7 +4,7 @@ const fg = require("fast-glob");
 const cheerio = require("cheerio");
 const prettier = require("prettier");
 
-const ROOT_DIR = "2026";
+const ROOT_DIR = "./";
 const BASE_URL = "https://domain.com";
 
 function titleCase(text) {
