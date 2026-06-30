@@ -1,4 +1,4 @@
-![GitHub package.json dynamic](https://img.shields.io/github/package-json/description/codeposse/toolbox) [GitHub package.json dynamic](https://img.shields.io/github/package-json/version/codeposse/toolbox)
+![GitHub package.json dynamic](https://img.shields.io/github/package-json/description/codeposse/toolbox) | [GitHub package.json dynamic](https://img.shields.io/github/package-json/version/codeposse/toolbox) | [GitHub package.json dynamic](https://img.shields.io/github/package-json/author/codeposse/toolbox)
 # ReadMe
 
 This doc is to explain the repo. :date: Updated 29 June 2026
