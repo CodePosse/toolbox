@@ -11,7 +11,18 @@ Total n00b:
 2) download this repo to your computer
 3) get a command prompt aka terminal in the root of this folder
 4) type `npm i` and it will install all the stuff you will need in that folder
-5) Inside the JS files we have defined `BASE_URL = "https://domain.com";` and you should change that. There is also a `const ROOT_DIR = "./sample";` that you can point to specific directories. The url there will be used for social media stuff that requires an absolute path to things like images. Don't forget the description either `DEFAULT_DESCRIPTION = "yoursitedescription";`
+5) There is a file called `toolkit.config.js` and inside there you should change these to YOUR values
+    ```root: "sample",
+    baseUrl: "https://domain.com",
+    siteName: "site-name",
+    authorName: "author-name",
+    organizationName: "organization-name",```
+    and a little further down:
+    ```defaultDescription: "global-site-description",
+    images: {
+        social: "https://domain.com/assets/social-card.png",
+        logo: "https://domain.com/assets/logo.png"
+    },```
 
 :date: Updated 29 June 2026
 

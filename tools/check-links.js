@@ -1,3 +1,4 @@
+// I tried to make the function names make some sense.
 const fs = require("fs/promises");
 const path = require("path");
 const fg = require("fast-glob");
