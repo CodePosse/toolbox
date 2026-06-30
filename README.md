@@ -21,10 +21,11 @@ Total n00b:
 - Social (OG/Twitter) is `npm run social`
 - Minify is `npm run minify`
 - Prettify is `npm run pretty`
-- Add Schema is `npm run schema`
-- Site Auditor for bad links is `npm run links`
-- Breadcrumb maker is `npm run breadcrumbs`
+- Add Schema is `npm run schema` 
+- Site Auditor for bad links is `npm run links` 
+- Breadcrumb maker is `npm run breadcrumbs` 
 - Sitemapper is `npm run sitemap`
+- Build (most, not minified or validated link check) is `npm run build`
 
 ### Description
     seo        → doctype, lang, charset, viewport, title, description, robots, canonical, theme-color 
@@ -33,6 +34,6 @@ Total n00b:
     ada        → accessibility attribute fixes 
     breadcrumbs→ visible breadcrumb navigation 
     sitemap    → sitemap.xml + robots.txt 
-    links      → audit/report broken internal links, duplicate IDs, missing anchors 
+    links      → audit/report broken internal links, duplicate IDs, missing anchors and makes a `reports/links-report.json`
     pretty     → format files 
     minify     → minify HTML + JS 
