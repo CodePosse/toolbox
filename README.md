@@ -1,6 +1,7 @@
+![GitHub package.json dynamic](https://img.shields.io/github/package-json/description/codeposse/toolbox) [GitHub package.json dynamic](https://img.shields.io/github/package-json/version/codeposse/toolbox)
 # ReadMe
 
-This doc is to explain the repo.
+This doc is to explain the repo. :date: Updated 29 June 2026
 
 I created a series of tools for post-production and pre-compilation of front end assets like HTML, JS and CSS. It took me a LOOOOONNNNGGGGG time to make this and I finally got off my butt to make it happen.
 
@@ -16,15 +17,17 @@ Total n00b:
     baseUrl: "https://domain.com",
     siteName: "site-name",
     authorName: "author-name",
-    organizationName: "organization-name",```
+    organizationName: "organization-name",
+    ```
     and a little further down:
     ```defaultDescription: "global-site-description",
     images: {
         social: "https://domain.com/assets/social-card.png",
         logo: "https://domain.com/assets/logo.png"
-    },```
+    },
+    ```
 
-:date: Updated 29 June 2026
+
 
 ## Running tasks
 - ADA is `npm run ada`
@@ -48,3 +51,26 @@ Total n00b:
     links      → audit/report broken internal links, duplicate IDs, missing anchors and makes a `reports/links-report.json`
     pretty     → format files 
     minify     → minify HTML + JS 
+
+
+    ## License
+
+  
+
+FREEEEEEEEEE
+
+  
+
+###### More of me
+
+  
+
+[Weaponized UX](https://timhunold.medium.com/weaponized-ux-ui-sniping-your-way-to-higher-conversions-def0d62f22df) | [Dev.to](https://dev.to/codeposse) | [Medium](https://medium.com/@timhunold) | [LinkedIn](https://www.linkedin.com/in/itssobig/) | [StackOverflow](https://stackoverflow.com/users/4071647/codeposse) | [Insta](https://www.instagram.com/pup90210/) | [I actually race](https://scca.com/beverlyhills)
+
+  
+
+[repo]: https://github.com/CodePosse/toolbox.git
+
+[tim hunold]: https://www.itssobig.com/
+
+[node.js]: https://nodejs.org
