@@ -11,10 +11,6 @@
     "meta": "npm run seo && npm run social",
     "pretty": "node prettify.js",
     "minify": "node minify.js"
-    npm run breadcrumbs
-npm run schema
-npm run sitemap
-npm run links
   },
   "devDependencies": {
     "cheerio": "^1.2.0",
