@@ -11,6 +11,7 @@ Total n00b:
 2) download this repo to your computer
 3) get a command prompt aka terminal in the root of this folder
 4) type `npm i` and it will install all the stuff you will need in that folder
+5) Inside the JS files we have defined `BASE_URL = "https://domain.com";` and you should change that. There is also a `const ROOT_DIR = "./";` that you can point to specific directories.
 
 :date: Updated 29 June 2026
 
