@@ -27,12 +27,12 @@ Total n00b:
 - Sitemapper is `npm run sitemap`
 
 ### Description
-seo        → doctype, lang, charset, viewport, title, description, robots, canonical, theme-color
-social     → Open Graph + Twitter/X Cards only
-schema     → JSON-LD only
-ada        → accessibility attribute fixes
-breadcrumbs→ visible breadcrumb navigation
-sitemap    → sitemap.xml + robots.txt
-links      → audit/report broken internal links, duplicate IDs, missing anchors
-pretty     → format files
-minify     → minify HTML + JS
+    seo        → doctype, lang, charset, viewport, title, description, robots, canonical, theme-color 
+    social     → Open Graph + Twitter/X Cards only 
+    schema     → JSON-LD only 
+    ada        → accessibility attribute fixes 
+    breadcrumbs→ visible breadcrumb navigation 
+    sitemap    → sitemap.xml + robots.txt 
+    links      → audit/report broken internal links, duplicate IDs, missing anchors 
+    pretty     → format files 
+    minify     → minify HTML + JS 
