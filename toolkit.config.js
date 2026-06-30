@@ -1,22 +1,18 @@
 module.exports = {
     root: "sample",
     baseUrl: "https://domain.com",
-
-    siteName: "Website Name",
-    organizationName: "Organization Name",
-
+    siteName: "site-name",
+    authorName: "author-name",
+    organizationName: "organization-name",
     language: "en-US",
     ogLocale: "en_US",
     themeColor: "#000000",
-
-    defaultTitle: "Website Name",
-    defaultDescription: "Default website description.",
-
+    defaultTitle: "site-name",
+    defaultDescription: "global-site-description",
     images: {
         social: "https://domain.com/assets/social-card.png",
         logo: "https://domain.com/assets/logo.png"
     },
-
     social: {
         twitterCard: "summary_large_image",
         imageWidth: "1200",
