@@ -1,7 +1,7 @@
 {
   "name": "static-site-toolkit",
   "version": "1.0.0",
-  "author": "Tim Hunold <codeposse@gmail.com>",
+  "author": "T. Hunold <codeposse@gmail>",
   "repository": "https://github.com/CodePosse/toolbox.git",
   "description": "Reusable static HTML toolkit for SEO, Open Graph, Twitter Cards, schema, accessibility, sitemaps, links, prettifying, and minification.",
   "type": "commonjs",
