@@ -30,6 +30,7 @@ Total n00b:
 
 
 ## Running tasks
+You do this in the root of your project folder.
 - ADA is `npm run ada`
 - SEO is `npm run seo`
 - Social (OG/Twitter) is `npm run social`
